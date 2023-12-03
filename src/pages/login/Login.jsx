@@ -21,6 +21,9 @@ export default function Login() {
         headers:{
           Accept: 'application/json',
          'Content-Type': 'application/json',
+         'mode' : 'no-cors',
+         'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Credentials': 'true'
       }});
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
     } catch (err) {

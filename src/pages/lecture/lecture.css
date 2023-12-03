@@ -1,0 +1,35 @@
+.lecture {
+  text-align: center;
+  padding: 20px;
+}
+
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* gap: 20px; */
+  padding: 10px;
+}
+
+.video-wrapper {
+  width: calc(33.33% - 20px); /* Adjust the width and gap as needed */
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 10px;
+
+
+   
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .video-wrapper {
+    width: calc(50% - 20px); /* Two videos per row on smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .video-wrapper {
+    width: 100%; /* One video per row on even smaller screens */
+  }
+}

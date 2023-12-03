@@ -5,9 +5,10 @@ import { Context } from "../../context/Context";
 
 export default function Topbar() {
   const {user,dispatch} = useContext(Context);
-  const PF = "http://localhost:8080/images/"
+  const PF = "https://blog-app-api-83i6.onrender.com/api/images/"
 
   const handleLogout = () =>{
+    // agar user hai toh logout dikhega
     dispatch({type:"LOGOUT" });
   };
   return (
@@ -24,8 +25,8 @@ export default function Topbar() {
               HOME
             </Link>
           </li>
-          <li className="topListItem">ABOUT</li>
-          <li className="topListItem"><Link to='/contact' className="link">CONTACT</Link></li>
+          <li className="topListItem"><Link to='/diet' className="link">DIET</Link></li>
+          <li className="topListItem"><Link to='/lecture' className="link">LECTURE</Link></li>
           <li className="topListItem">
             <Link className="link" to="/write">
               WRITE

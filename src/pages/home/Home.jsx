@@ -13,6 +13,7 @@ const{search} = useLocation();
 
   useEffect(()=>{
     const fetchPosts = async ()=>{
+    console.log( "this is url " + `${Url}posts`+search)
      const res = await axios.get(`${Url}posts`+search);
      
      setPosts(res.data)

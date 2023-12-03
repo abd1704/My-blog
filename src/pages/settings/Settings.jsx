@@ -3,6 +3,7 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import { useContext, useState } from "react";
 import { Context } from "../../context/Context";
 import axios from "axios";
+import { Url } from "../../Url";
 
 export default function Settings() {
   const[file,setFile] =useState(null);
@@ -11,7 +12,7 @@ export default function Settings() {
   const[password,setPassword] = useState("");
   const[success,setSuccess] = useState(false);
   const {user,dispatch} = useContext(Context);
-   const PF = "http://localhost:8080/images/";
+   const PF = "https://blog-app-api-83i6.onrender.com/api/images/";
   const handleSubmit = async(e) =>{
     e.preventDefault();
     dispatch({type:"UPDATE_START"})
@@ -26,11 +27,17 @@ export default function Settings() {
         data.append("name",filename);
         data.append("file",file);
         updatedUser.profilePic = filename;
+        console.log("first") 
+        console.log(data)
         try{
-            await axios.post("/upload",data);
+          console.log(Url+"upload")
+            await axios.post(`${Url}upload`,data);
+
            
         }
-        catch (err) {}
+        catch (err) {
+          console.log(err)
+        }
 
     }
     try{

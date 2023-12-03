@@ -1,0 +1,56 @@
+/* diet.css */
+.diet-page {
+  text-align: center;
+  padding: 20px;
+}
+
+.diet-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.diet-plan {
+  width: calc(33.33% - 20px); /* Three containers in each row with spacing */
+  margin-bottom: 30px; /* Increased margin for more space */
+  text-align: left;
+  text-decoration: none;
+  color: #333;
+  height: 400px; /* Increased container height */
+}
+
+.diet-plan img {
+  width: 100%;
+  height: 70%; /* Adjusted image height */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.diet-plan .plan-details {
+  height: 30%; /* Adjusted height for plan details */
+  padding: 10px;
+}
+
+.diet-plan h2 {
+  margin-top: 10px;
+}
+
+.diet-plan p {
+  margin-top: 10px;
+  overflow: hidden;
+  max-height: 100px; /* Adjusted max height for info container */
+  transition: max-height 0.3s ease;
+}
+
+/* Show the hidden text when the container is hovered */
+.diet-plan:hover p {
+  max-height: 1000px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .diet-plan {
+    width: calc(50% - 20px); /* Two containers in each row on smaller screens */
+    height: 400px; /* Adjusted container height for smaller screens */
+  }
+}
