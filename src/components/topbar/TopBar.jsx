@@ -5,7 +5,7 @@ import { Context } from "../../context/Context";
 
 export default function Topbar() {
   const {user,dispatch} = useContext(Context);
-  const PF = "https://blog-app-api-83i6.onrender.com/api/images/"
+  const PF = "http://localhost:8080/api/images/"
 
   const handleLogout = () =>{
     // agar user hai toh logout dikhega
@@ -27,6 +27,7 @@ export default function Topbar() {
           </li>
           <li className="topListItem"><Link to='/diet' className="link">DIET</Link></li>
           <li className="topListItem"><Link to='/lecture' className="link">LECTURE</Link></li>
+          {/* <li className="topListItem"><Link to='/Profile' className="link">PROFILE</Link></li> */}
           <li className="topListItem">
             <Link className="link" to="/write">
               WRITE

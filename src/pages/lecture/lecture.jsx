@@ -1,7 +1,7 @@
 import React from 'react';
 import './lecture.css';
 
-const lecture = () => {
+const Lecture = () => {
   const videoIds = [
     'Iga0h0p6DcI',
     'AzV3EA-1-yM',
@@ -21,12 +21,12 @@ const lecture = () => {
     <div className="lecture">
       <h1>Exercise Lectures</h1>
       <div className="video-container">
-        {videoIds.map((videoId) => (
+        {videoIds.map((videoId, index) => (
           <div key={videoId} className="video-wrapper">
-            <iframe className='main-video'
+            <iframe
+              className='main-video'
               width="560"
               height="315"
-              // style={{paddingRight: '20px'}}
               src={`https://www.youtube.com/embed/${videoId}`}
               title={`YouTube Video ${videoId}`}
               frameBorder="0"
@@ -39,4 +39,4 @@ const lecture = () => {
   );
 };
 
-export default lecture;
+export default Lecture;

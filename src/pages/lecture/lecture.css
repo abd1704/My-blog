@@ -6,8 +6,8 @@
 .video-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  /* gap: 20px; */
+  justify-content: center; /* Center the video containers */
+  gap: 20px; /* Space between each container */
   padding: 10px;
 }
 
@@ -16,20 +16,23 @@
   box-sizing: border-box;
   margin-bottom: 20px;
   padding: 10px;
-
-
-   
 }
 
 /* Responsive styles */
+@media screen and (max-width: 1200px) {
+  .video-wrapper {
+    width: calc(50% - 20px); /* Two videos per row on medium screens */
+  }
+}
+
 @media screen and (max-width: 768px) {
   .video-wrapper {
-    width: calc(50% - 20px); /* Two videos per row on smaller screens */
+    width: calc(100% - 20px); /* One video per row on smaller screens */
   }
 }
 
 @media screen and (max-width: 480px) {
   .video-wrapper {
-    width: 100%; /* One video per row on even smaller screens */
+    width: calc(100% - 20px); /* One video per row on even smaller screens */
   }
 }

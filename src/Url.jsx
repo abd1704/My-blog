@@ -1,1 +1,1 @@
-export const Url = "https://blog-app-api-83i6.onrender.com/api/";
+export const Url = "http://localhost:8080/api/";

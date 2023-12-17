@@ -12,7 +12,7 @@ export default function Settings() {
   const[password,setPassword] = useState("");
   const[success,setSuccess] = useState(false);
   const {user,dispatch} = useContext(Context);
-   const PF = "https://blog-app-api-83i6.onrender.com/api/images/";
+   const PF = "http://localhost:8080/api/images/";
   const handleSubmit = async(e) =>{
     e.preventDefault();
     dispatch({type:"UPDATE_START"})

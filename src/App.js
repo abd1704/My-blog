@@ -29,10 +29,12 @@ function App() {
         <Route path="/login" element = {user ? <Home /> : <Login />} />
         <Route path="/post/:id" element = {<Single />}/>
         <Route path="/diet/:id" element={<DietDetail />} />
+        
         <Route path="/write" element = {user ? <Write /> : <Register />} />
         <Route path="/settings" element =  {user ? <Settings /> : <Register />} />
         <Route path="/lecture" element =  {<Lecture/>} />
         <Route path="/diet" element =  {<Diet/>} />
+        
       </Routes>
     </Router>
   );
